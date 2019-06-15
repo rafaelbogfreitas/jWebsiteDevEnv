@@ -1,0 +1,11 @@
+{
+  "name": "jaimewebsite",
+  "version": "0.0.1",
+  "description": "Development of a page for musician Jaime",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Rafael Freitas",
+}
