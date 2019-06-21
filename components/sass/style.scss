@@ -1,3 +1,47 @@
 //STYLES.SCSS
 //============
 @import "compass";
+@import "compass/reset";
+
+//Variables
+//===========
+@import 'variables';
+
+//Main STYLES
+//==============
+@import 'base';
+
+//Header styles
+//==============
+@import 'header';
+
+//Meet styles
+//==============
+@import 'meet';
+
+//Songs styles
+//==============
+@import 'songs';
+
+//Videos styles
+//=============
+@import 'videos';
+
+//Contact styles;
+@import 'contact';
+
+//Form styles
+//===========
+@import 'form';
+
+//Animations
+//==========
+@import 'animations';
+
+//Mixins
+//========
+@import 'mixins';
+
+//Fonts
+//========
+@import "fonts";

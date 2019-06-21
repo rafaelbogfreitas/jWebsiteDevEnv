@@ -1,0 +1,17 @@
+.video {
+  max-width: 100vw;
+  min-height: 100vh;
+  font-family: $main-font;
+  background-image:linear-gradient(90deg, $faded-purple, $main-purple) ;
+  padding: $main-paddings;
+  h2 {
+    font-size: 6rem;
+    margin: $main-margins;
+    font-weight: bold;
+  }
+  .video-box {
+    display:flex;
+    justify-content: center;
+  }
+
+}
