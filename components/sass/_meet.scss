@@ -20,6 +20,10 @@
       top:50px;
       left:50%;
       background:$faded-green;
+      &:hover{
+        animation: buttonActive 0.3s linear;
+
+      }
     }
     &::before{
       top:0;

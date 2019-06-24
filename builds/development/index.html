@@ -4,26 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script> -->
     <title>J World Music</title>
   </head>
   <body>
     <header class="banner">
       <div class="logo-box">
         <h1 class="header-logo">J</h1>
+        <nav class="main-nav">
+          <ul>
+            <li class="meet-btn">MEET</li>
+            <li class="songs-btn">SONGS</li>
+            <li class="videos-btn">VIDEOS</li>
+            <li class="contact-btn">CONTACT</li>
+            <li class="back-btn">BACK</li>
+          </ul>
+        </nav>
       </div>
     </header>
 
+    <!-- MEET section -->
     <section class="meet">
       <h2>MEET J</h2>
       <p>J Is a London based singer songwriter. J music is organic and sophisticated with a tropical twist. From uplifting acoustic songs
        to thoughtful lyrics ballads. He's here to enjoy himself and uplift others with the timeless message of Peace&Love. </p>
+       <p>J is singer, songwriter, based in London .
+He wrote ,composed , arranged and performed all his songs . Although he had a valuable collaboration by some British musicians Basil Isaacs on percussions,Dan Boardman on Trombone Tom Harrison and Miguel Gorodi on Trumpets ,Abraham Hampton a US piano player from Harlem and Paulo on Drums. His seminal work was recorded in a joyful atmosphere at the Residents Studios Willesden Green north west London Borough of Brent by Ian Hansen a US sound engineer from Indiana based in UK.After 16 months of recording the album was ready to be taken to Air studios in Hampstead to be mastered by the acclaimed master engeneer John Webber.</p>
     </section>
+
+
+    <!-- SONGS section -->
+    <div class="songs-banner"></div>
 
     <section class="songs">
       <h2>J SONGS</h2>
-
     </section>
 
+    <!-- VIDEOS section -->
     <section class="video">
       <h2>J VIDEOS</h2>
       <div class="video-box">
@@ -33,25 +53,29 @@
       </div>
     </section>
 
+    <!-- CONTACT section -->
     <section class="contact">
       <h2>CONTACT</h2>
-      <form class="contact-form" method="post" netlify>
-        <div class="form-section">
-          <label for="name">NAME</label>
-          <input type="name" name="name" placeholder="your name here">
-        </div>
-        <div class="form-section">
-          <label for="mail">EMAIL</label>
-          <input type="email" name="mail" placeholder="youremail@email.com">
-        </div>
-        <div class="form-section">
-          <label for="message">MESSAGE</label>
-          <textarea type="text" name="message" value="message"></textarea>
-        </div>
-        <div class="form-section">
-          <input type="submit" name="submit" value="SEND" style="color: black">
-        </div>
-      </form>
+      <div class="contact-page-content">
+        <!-- CONTACT_FORM -->
+        <form class="contact-form" method="post" netlify>
+          <div class="form-section">
+            <label for="name">NAME</label>
+            <input type="name" name="name" placeholder="your name here">
+          </div>
+          <div class="form-section">
+            <label for="mail">EMAIL</label>
+            <input type="email" name="mail" placeholder="youremail@email.com">
+          </div>
+          <div class="form-section">
+            <label for="message">MESSAGE</label>
+            <textarea type="text" name="message" value="message"></textarea>
+          </div>
+          <div class="form-section">
+            <input type="submit" name="submit" value="SEND" style="color: black">
+          </div>
+        </form>
+      </div>
 
     </section>
     <script type="text/javascript" src="js/script.js"></script>

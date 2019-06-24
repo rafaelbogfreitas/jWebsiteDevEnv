@@ -1,3 +1,12 @@
+.songs-banner{
+  width:100vw;
+  height:300px;
+  background-image: url('../images/guitar.jpg');
+  background-attachment: fixed;
+  background-position: top;
+  background-size: contain;
+}
+
 .songs {
   max-width: 100vw;
   min-height: 100vh;

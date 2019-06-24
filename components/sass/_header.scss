@@ -11,21 +11,19 @@ header {
 
 .logo-box {
   padding: $logo-margins;
-  position: relative;
+  // position: relative;
 }
 
 .header-logo{
   padding:$main-paddings;
   font-size: 20rem;
   position: relative;
-  z-index: 2;
   &:before, &:after{
-    display:inline-block;
     padding:$main-paddings;
-    z-index: 1;
     content: 'J';
     position: absolute;
     top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     transition: left 0.3s ease-out, color 0.3s ease-out;

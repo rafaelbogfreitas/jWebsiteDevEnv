@@ -1,34 +1,29 @@
-$ = require('jquery');
 
 $(document).ready(function(){
 
-  $('.header-logo').on('click', function() {
-    let position = $('.contact').position();
-    position.top = position.top - 50;
-    position.behavior = 'smooth';
-    window.scroll(position);
 
+  $('.meet-btn').on('click', function() {
+    pickElement($('.meet'));
+  });
+  $('.songs-btn').on('click', function() {
+    pickElement($('.songs'));
+  });
+  $('.videos-btn').on('click', function() {
+    pickElement($('.video'));
+  });
+  $('.contact-btn').on('click', function() {
+    pickElement($('.contact'));
+  });
+  $('.back-btn').on('click', function() {
+    pickElement($('.banner'));
   });
 
-  $('.songs h2').on('click', function(){
-    let position = $('.meet').position();
+
+  function pickElement(elem) {
+    let position = elem.position();
     position.top = position.top;
     position.behavior = 'smooth';
     window.scroll(position);
-  });
-
-  $('.meet').on('click', function(){
-    let position = $('.songs').position();
-    position.top = position.top;
-    position.behavior = 'smooth';
-    window.scroll(position);
-  });
-
-  $('.video').on('click', function(){
-    let position = $('.banner').position();
-    position.top = position.top;
-    position.behavior = 'smooth';
-    window.scroll(position);
-  });
+  }
 
 });

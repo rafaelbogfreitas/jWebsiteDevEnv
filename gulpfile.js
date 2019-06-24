@@ -1,12 +1,12 @@
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const concat = require('gulp-concat');
-const browserify = require('gulp-browserify');
 const compass = require('gulp-compass');
-const uglify = require('gulp-uglify');
 const miniHtml = require('gulp-minify-html');
 const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify-es').default;
+const babel = require('gulp-babel');
 
 
 let jsSources = ['components/scripts/**/*.js'];
@@ -17,7 +17,6 @@ let sassSources = ['components/sass/*.scss'];
 function concatFiles(cb) {
   gulp.src(jsSources)
     .pipe(concat('script.js'))
-    .pipe(browserify())
     .pipe(gulp.dest('builds/development/js'));
     cb();
 }
@@ -35,10 +34,29 @@ function sass(cb) {
   cb();
 }
 
+//compile es6 into es5 with babel
+
+function compileES6(cb){
+  gulp.src('components/scripts/concatenatedScripts/*.js')
+      // Stop the process if an error is thrown.
+      // .pipe(plumber())
+      // Transpile the JS code using Babel's preset-env.
+      .pipe(babel({
+        presets: [
+          ['@babel/env', {
+            modules: false
+          }]
+        ]
+      }))
+      // Save each component as a separate file in dist.
+      .pipe(gulp.dest('builds/development/js'));
+  cb();
+}
+
 function uglifyJs(cb) {
-  gulp.src('builds/development/js/*.js')
+  gulp.src('builds/development/js/*js')
   .pipe(uglify())
-  .pipe(gulp.dest('builds/dist/js'))
+  .pipe(gulp.dest('builds/dist/js/'))
   cb();
 }
 
@@ -84,11 +102,16 @@ function minifyImages(cb) {
 //prints message to the console
 function defaultTask(cb) {
   gutil.log("Processing the files for Jaime's Project");
-
   cb();
 }
 
-exports.sass = sass
-exports.concat = concatFiles
-exports.default = gulp.series(defaultTask, concatFiles, html, minifyCSS, minifyImages, uglifyJs);
-exports.watch = watch
+//pipe song files from 'development/' to 'dist/'
+
+function pipeSongs(cb){
+  gulp.src('builds/development/songs/*.mp3')
+  .pipe(gulp.dest('builds/dist/songs'))
+  cb();
+}
+
+exports.watch = watch;
+exports.default = gulp.series(defaultTask, html, minifyCSS, minifyImages, uglifyJs, pipeSongs);
