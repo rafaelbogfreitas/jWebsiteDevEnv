@@ -14,8 +14,9 @@
   justify-content: space-around;
   border:1px  solid black;
   border-radius: 10px;
-  background-image: linear-gradient($faded-green, $faded-purple);
-  box-shadow: 3px 3px 4px 2px rgba(0,0,0,0.7);
+  background-image: linear-gradient(to right, $main-purple, $faded-purple);
+  color:white;
+  // box-shadow: 3px 3px 4px 2px rgba(0,0,0,0.7);
 }
 
 .form-section {
@@ -27,17 +28,22 @@
     font-size: 1.5rem;
   }
   input{
-    width:50%;
+    width:70%;
     height:25px;
     align-self: flex-end;
     margin: $form-elem-margins;
+    font-size: 1.2rem;
+    color:$main-purple;
+    border:0.5px solid black;
+    border-radius: 5px;
+    padding:1%;
     &[type="submit"]{
       margin: $form-elem-margins auto;
-      font-size: 0.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
       align-self: center;
       width: 30%;
-      height: 50px;
+      height: 30px;
       &:hover {
         animation: buttonActive 0.3s ease-out forwards;
       }
@@ -47,10 +53,14 @@
     }
   }
   textarea{
-    min-width: 50%;
-    max-width: 50%;
+    min-width: 70%;
+    max-width: 70%;
     height: 100px;
     align-self:flex-end;
     margin: $form-elem-margins;
+    padding:1%;
+    font-size: 1.2rem;
+    border:0.5px solid black;
+    border-radius: 5px;
   }
 }
