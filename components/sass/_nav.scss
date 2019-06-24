@@ -1,0 +1,23 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  li {
+    font-family: BenchNine;
+    font-size: 1.4rem;
+    color:white;
+    margin: 20px;
+    background: $main-purple;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+      border:1px solid $main-green;
+      color: $main-green;
+    }
+  }
+}
