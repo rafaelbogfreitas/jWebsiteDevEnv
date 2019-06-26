@@ -27,8 +27,8 @@ player.addEventListener('click', function(e){
     audio.id = 'playing';
     audio.src = songName;
     document.body.appendChild(audio);
-    audio.play();
 
+    audio.play();
 
     audio.addEventListener('ended', function(e){
       audio.parentNode.removeChild(audio);
