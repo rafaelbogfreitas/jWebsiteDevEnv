@@ -113,5 +113,13 @@ function pipeSongs(cb){
   cb();
 }
 
+//pipe fonts to 'dist/'
+
+function pipeFonts(cb){
+  gulp.src('builds/development/fonts/**/*.*')
+  .pipe(gulp.dest('builds/dist/fonts'))
+  cb();
+}
+
 exports.watch = watch;
-exports.default = gulp.series(defaultTask, html, minifyCSS, minifyImages, uglifyJs, pipeSongs);
+exports.default = gulp.series(defaultTask, html, minifyCSS, minifyImages, uglifyJs, pipeSongs, pipeFonts);

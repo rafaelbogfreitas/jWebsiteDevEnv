@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=BenchNine|Lobster&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,18 +54,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+@font-face {
+  font-family: 'Lobster';
+  src: url("../fonts/Lobster/Lobster-Regular.eot");
+  src: local("Lobster Regular"), local("Lobster-Regular"), url("../fonts/Lobster/Lobster-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lobster/Lobster-Regular.woff2") format("woff2"), url("../fonts/Lobster/Lobster-Regular.woff") format("woff"), url("../fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BenchNine';
+  src: url("../BenchNine/fonts/BenchNine-Regular.eot");
+  src: local("BenchNine Regular"), local("BenchNine-Regular"), url("../fonts/BenchNine/BenchNine-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/BenchNine/BenchNine-Regular.woff2") format("woff2"), url("../fonts/BenchNine/BenchNine-Regular.woff") format("woff"), url("../fonts/BenchNine/BenchNine-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BenchNine';
+  src: url("../fonts/BenchNine-Regular.eot");
+  src: local("BenchNine Light"), local("BenchNine-Light"), url("../fonts/BenchNine/BenchNine-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/BenchNine/BenchNine-Light.woff2") format("woff2"), url("../fonts/BenchNine/BenchNine-Light.woff") format("woff"), url("../fonts/BenchNine/BenchNine-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BenchNine';
+  src: url("../fonts/BenchNine/BenchNine-Regular.eot");
+  src: local("BenchNine Bold"), local("BenchNine-Bold"), url("../fonts/BenchNine/BenchNine-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BenchNine/BenchNine-Bold.woff2") format("woff2"), url("../fonts/BenchNine/BenchNine-Bold.woff") format("woff"), url("../fonts/BenchNine/BenchNine-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 html {
   font-size: 12px;
   max-width: 100vw;
 }
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  html {
+    max-width: 100%;
+  }
+}
 
 body {
   font-family: Lobster;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 6rem;
+  margin: 5%;
+  font-weight: bold;
+  position: relative;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  h2 {
+    font-size: 5rem;
+  }
 }
 
 header {
   width: 100vw;
   height: 100vh;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  header {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    align-items: flex-end;
+    -ms-align-items: flex-end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+  }
 }
 
 .banner {
@@ -83,6 +141,11 @@ header {
   padding: 3%;
   font-size: 20rem;
   position: relative;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .header-logo {
+    font-size: 10rem;
+  }
 }
 .header-logo:before, .header-logo:after {
   padding: 3%;
@@ -116,6 +179,26 @@ header {
   top: 0;
   right: 0;
 }
+@media screen and (max-width: 1000px) and (min-width: 0px) {
+  .main-nav {
+    width: 100vw;
+    background: white;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 0px) {
+  .main-nav ul {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    justify-content: space-around;
+    -ms-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    top: 0;
+    left: 0;
+  }
+}
 .main-nav li {
   font-family: BenchNine;
   font-size: 1.4rem;
@@ -127,13 +210,40 @@ header {
   height: 50px;
   border-radius: 100%;
   display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
   justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .main-nav li {
+    font-size: 1.1rem;
+    color: black;
+    margin: 0.5%;
+    padding: 0.5%;
+    height: 3%;
+    background: transparent;
+  }
 }
 .main-nav li:hover {
   cursor: pointer;
   border: 0.5px solid rgba(210, 255, 113, 0.9);
   color: rgba(210, 255, 113, 0.9);
+}
+@media screen and (max-width: 1000px) and (min-width: 401px) {
+  .main-nav li {
+    font-size: 1.6rem;
+    margin-top: 5px;
+    background: transparent;
+    color: black;
+  }
 }
 
 .meet {
@@ -142,19 +252,24 @@ header {
   font-family: 'BenchNine';
   padding: 3%;
 }
-.meet h2 {
-  font-size: 6rem;
-  margin: 5%;
-  font-weight: bold;
-  position: relative;
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .meet {
+    padding-right: 0;
+  }
 }
 .meet h2::after, .meet h2::before {
   content: '';
   position: absolute;
   z-index: -1;
   border-radius: 100%;
-  height: 200px;
   width: 200px;
+  height: 200px;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .meet h2::after, .meet h2::before {
+    width: 100px;
+    height: 100px;
+  }
 }
 .meet h2::after {
   top: 50px;
@@ -174,14 +289,24 @@ header {
   margin: 5%;
   font-weight: lighter;
 }
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .meet p {
+    font-size: 2rem;
+  }
+}
 
 .songs-banner {
   width: 100vw;
-  height: 300px;
+  height: 500px;
   background-image: url("../images/guitar.jpg");
   background-attachment: fixed;
   background-position: top;
   background-size: contain;
+}
+@media screen and (max-width: 800px) and (min-width: 0px) {
+  .songs-banner {
+    display: none;
+  }
 }
 
 .songs {
@@ -191,10 +316,38 @@ header {
   background-image: linear-gradient(90deg, rgba(210, 255, 113, 0.2), rgba(210, 255, 113, 0.9));
   padding: 3%;
 }
-.songs h2 {
-  font-size: 6rem;
-  margin: 5%;
-  font-weight: bold;
+
+.player {
+  width: 40%;
+  height: auto;
+  color: white;
+  margin-left: 5%;
+  border-radius: 10px;
+  background: #a360f7;
+}
+@media screen and (max-width: 700px) and (min-width: 0px) {
+  .player {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.player li {
+  padding: 5%;
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.playing {
+  color: rgba(210, 255, 113, 0.9);
+  font-style: italic;
+  text-align: right;
+}
+
+.paused {
+  color: white;
+  font-style: bold;
 }
 
 .video {
@@ -204,93 +357,172 @@ header {
   background-image: linear-gradient(to right, rgba(163, 96, 247, 0.2), #a360f7);
   padding: 3%;
 }
-.video h2 {
-  font-size: 6rem;
-  margin: 5%;
-  font-weight: bold;
-}
 .video .video-box {
   display: flex;
+  -ms-display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
   justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.contacts-banner {
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/piano.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media screen and (max-width: 800px) and (min-width: 0px) {
+  .contacts-banner {
+    display: none;
+  }
 }
 
 .contact {
   max-width: 100vw;
   min-height: 100vh;
   font-family: "BenchNine";
-  padding-right: 5%;
-}
-.contact h2 {
-  font-size: 6rem;
-  margin: 5%;
-  font-weight: bold;
-  position: relative;
+  padding: 3%;
 }
 
 .contact-page-content {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  -ms-display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .contact-page-content {
+    justify-content: center;
+  }
 }
 
 .contact-form {
   margin: 5%;
   height: auto;
-  width: 40%;
+  width: 60%;
   display: flex;
+  -ms-display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
   flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   justify-content: space-around;
-  border: 1px  solid black;
+  -ms-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
   border-radius: 10px;
-  background-image: linear-gradient(to right, #a360f7, rgba(163, 96, 247, 0.2));
+  background: #a360f7;
   color: white;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .contact-form {
+    width: 95%;
+  }
 }
 
 .form-section {
   display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
   justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
 }
 .form-section label {
   align-self: flex-start;
+  -ms-align-self: flex-start;
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
   margin: 3%;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 400px) and (min-width: 0px) {
+  .form-section label {
+    font-size: 1.2rem;
+    margin: 2%;
+  }
 }
 .form-section input {
   width: 70%;
   height: 25px;
   align-self: flex-end;
+  -ms-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
   margin: 3%;
   font-size: 1.2rem;
   color: #a360f7;
-  border: 0.5px solid black;
   border-radius: 5px;
   padding: 1%;
+}
+@media screen and (max-width: 600px) and (min-width: 0px) {
+  .form-section input {
+    width: 60%;
+  }
 }
 .form-section input[type="submit"] {
   margin: 3% auto;
   font-size: 1.2rem;
-  font-weight: bold;
   align-self: center;
+  -ms-align-self: center;
+  -webkit-align-self: center;
+  -moz-align-self: center;
   width: 30%;
   height: 30px;
 }
 .form-section input[type="submit"]:hover {
   animation: buttonActive 0.3s ease-out forwards;
 }
-.form-section input:focus {
-  border: 1px solid black;
-}
 .form-section textarea {
-  min-width: 70%;
-  max-width: 70%;
+  width: 70%;
   height: 100px;
   align-self: flex-end;
+  -ms-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
   margin: 3%;
   padding: 1%;
   font-size: 1.2rem;
-  border: 0.5px solid black;
   border-radius: 5px;
+}
+@media screen and (max-width: 600px) and (min-width: 0px) {
+  .form-section textarea {
+    width: 60%;
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  font-family: BenchNine;
+  font-size: 1.3rem;
+  font-style: italic;
 }
 
 @keyframes slideLeft {

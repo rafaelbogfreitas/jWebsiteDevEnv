@@ -3,6 +3,14 @@
 @import "compass";
 @import "compass/reset";
 
+//Fonts
+//========
+@import "fonts";
+
+//Mixins
+//========
+@import 'mixins';
+
 //Variables
 //===========
 @import 'variables';
@@ -24,6 +32,7 @@
 //Songs styles
 //==============
 @import 'songs';
+@import 'player';
 
 //Videos styles
 //=============
@@ -36,14 +45,10 @@
 //===========
 @import 'form';
 
+//Footer stylesheet
+//=================
+@import 'footer';
+
 //Animations
 //==========
 @import 'animations';
-
-//Mixins
-//========
-@import 'mixins';
-
-//Fonts
-//========
-@import "fonts";

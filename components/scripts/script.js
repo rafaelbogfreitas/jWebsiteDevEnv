@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 
-
   $('.meet-btn').on('click', function() {
     pickElement($('.meet'));
   });
@@ -18,12 +17,20 @@ $(document).ready(function(){
     pickElement($('.banner'));
   });
 
-
   function pickElement(elem) {
-    let position = elem.position();
+
+    var position = elem.position();
     position.top = position.top;
     position.behavior = 'smooth';
     window.scroll(position);
   }
 
 });
+
+let nav = document.querySelector('.main-nav ul');
+
+nav.addEventListener('click', function(e){
+  let elem = document.querySelector(e.target.getAttribute('data-src'));
+  console.log(elem);
+  elem.scrollIntoView({'behavior':'smooth'});
+}, false)

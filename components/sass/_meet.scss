@@ -3,18 +3,21 @@
   min-height: 100vh;
   font-family: 'BenchNine';
   padding: $main-paddings;
+  @include break($mobile){
+    padding-right:0;
+  }
   h2 {
-    font-size: 6rem;
-    margin: $main-margins;
-    font-weight: bold;
-    position: relative;
     &::after, &::before{
       content: '';
       position: absolute;
       z-index:-1;
       border-radius: 100%;
-      height:200px;
       width:200px;
+      height:200px;
+      @include break($mobile){
+        width:100px;
+        height:100px;
+      }
     }
     &::after{
       top:50px;
@@ -35,5 +38,8 @@
     font-size: 3rem;
     margin: $main-margins;
     font-weight: lighter;
+    @include break($mobile){
+      font-size: 2rem;
+    }
   }
 }

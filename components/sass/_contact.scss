@@ -1,12 +1,17 @@
+.contacts-banner {
+  width: 100%;
+  height:500px;
+  background-image: url('../images/piano.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  @include break(800px){
+    display:none;
+  }
+}
+
 .contact {
   max-width: 100vw;
   min-height: 100vh;
   font-family: $main-font;
-  padding-right:5%;
-  h2 {
-    font-size: 6rem;
-    margin: $main-margins;
-    font-weight: bold;
-    position: relative;
-  }
+  padding:$main-paddings;
 }

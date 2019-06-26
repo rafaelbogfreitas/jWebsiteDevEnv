@@ -1,8 +1,23 @@
 html {
   font-size: 12px;
   max-width: 100vw;
+  @include break($mobile){
+    max-width: 100%;
+  }
 }
 
 body {
   font-family: Lobster;
+  margin:0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 6rem;
+  margin: $main-margins;
+  font-weight: bold;
+  position: relative;
+  @include break($mobile) {
+    font-size: 5rem;
+  }
 }

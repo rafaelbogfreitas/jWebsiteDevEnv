@@ -1,1 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=BenchNine|Lobster&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=BenchNine|Lobster&display=swap');
+
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('../fonts/Lobster/Lobster-Regular.eot');
+    src: local('Lobster Regular'), local('Lobster-Regular'),
+        url('../fonts/Lobster/Lobster-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lobster/Lobster-Regular.woff2') format('woff2'),
+        url('../fonts/Lobster/Lobster-Regular.woff') format('woff'),
+        url('../fonts/Lobster/Lobster-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BenchNine';
+    src: url('../BenchNine/fonts/BenchNine-Regular.eot');
+    src: local('BenchNine Regular'), local('BenchNine-Regular'),
+        url('../fonts/BenchNine/BenchNine-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BenchNine/BenchNine-Regular.woff2') format('woff2'),
+        url('../fonts/BenchNine/BenchNine-Regular.woff') format('woff'),
+        url('../fonts/BenchNine/BenchNine-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BenchNine';
+    src: url('../fonts/BenchNine-Regular.eot');
+    src: local('BenchNine Light'), local('BenchNine-Light'),
+        url('../fonts/BenchNine/BenchNine-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BenchNine/BenchNine-Light.woff2') format('woff2'),
+        url('../fonts/BenchNine/BenchNine-Light.woff') format('woff'),
+        url('../fonts/BenchNine/BenchNine-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BenchNine';
+    src: url('../fonts/BenchNine/BenchNine-Regular.eot');
+    src: local('BenchNine Bold'), local('BenchNine-Bold'),
+        url('../fonts/BenchNine/BenchNine-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BenchNine/BenchNine-Bold.woff2') format('woff2'),
+        url('../fonts/BenchNine/BenchNine-Bold.woff') format('woff'),
+        url('../fonts/BenchNine/BenchNine-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

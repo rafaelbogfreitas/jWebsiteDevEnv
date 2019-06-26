@@ -4,14 +4,15 @@
   font-family: $main-font;
   background-image:linear-gradient(to right, $faded-purple, $main-purple) ;
   padding: $main-paddings;
-  h2 {
-    font-size: 6rem;
-    margin: $main-margins;
-    font-weight: bold;
-  }
   .video-box {
     display:flex;
-    justify-content: center;
-  }
+    -ms-display:flex;
+    -moz-display:flex;
+    -webkit-display:flex;
 
+    justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+  }
 }

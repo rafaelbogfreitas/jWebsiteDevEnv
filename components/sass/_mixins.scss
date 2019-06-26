@@ -1,0 +1,5 @@
+@mixin break($value, $value2:0px) {
+  @media screen and (max-width: $value) and (min-width: $value2){
+    @content
+  }
+};
