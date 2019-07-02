@@ -28,6 +28,7 @@ player.addEventListener('click', function(e){
     audio.src = songName;
     document.body.appendChild(audio);
 
+
     audio.play();
 
     audio.addEventListener('ended', function(e){
@@ -38,16 +39,27 @@ player.addEventListener('click', function(e){
 }, false);
 
 $(document).ready(function(){
-  $('.player').on('click', function(event){
-    if($(event.target).hasClass('playing')){
-      $(event.target).removeClass('playing');
-      $(event.target).addClass('paused');
 
-    } else {
-      $(event.target).removeClass('paused');
-      $(event.target).addClass('playing');
-      $(event.target).siblings().removeClass('playing');
-      $(event.target).siblings().removeClass('paused');
+  $('.player').on('click', function(event){
+    if($(event.target).hasClass('playing'))
+
+      $(event.target).removeClass('playing').addClass('paused');
+      
+    else
+
+      $(event.target).removeClass('paused').addClass('playing')
+      .siblings().removeClass('playing paused');
+
+  });//player event listener
+
+  //songs area event listener to remove player classes and pause the song.
+  $('.songs').on('click', function(e){
+    if($(e.target).hasClass('songs')){
+      let audio = document.querySelector('audio');
+      audio.parentNode.removeChild(audio);
+      $('.player').children().removeClass('playing paused');
     }
-  })
-})
+
+  });//songs event listener
+
+});

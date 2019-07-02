@@ -37,6 +37,7 @@
   p{
     font-size: 3rem;
     margin: $main-margins;
+    margin-right: 7%;
     font-weight: lighter;
     @include break($mobile){
       font-size: 2rem;

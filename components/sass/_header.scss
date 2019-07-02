@@ -1,8 +1,5 @@
 header {
-  width: 100vw;
-  height: 100vh;
   @include break($mobile){
-
     display:flex;
     -ms-display:flex;
     -webkit-display:flex;
@@ -16,20 +13,41 @@ header {
 }
 
 .banner {
-  background: url('../images/jaime.jpg') fixed;
-  background-position:50% 50%;
+  width: 100vw;
+  height: 100vh;
+
+  position:relative;
+
+  background: url('../images/jaime.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
+
+  @include break($mobile){
+    &:before {
+      content:"";
+      position:absolute;
+      width: 100vw;
+      height: 100vh;
+      top:0;
+      left: 0;
+      background:rgba(255,255,255,0.6);
+    }
+  }
 }
 
 .logo-box {
   padding: $logo-margins;
-  // position: relative;
 }
 
 .header-logo{
   padding:$main-paddings;
-  font-size: 20rem;
+  font-size: 25rem;
   position: relative;
+  @include break(1000px, 401px){
+    font-size: 15rem;
+  }
   @include break(400px){
     font-size: 10rem;
   }
@@ -52,7 +70,6 @@ header {
     color:$main-purple;
   }
   &:hover{
-    cursor:pointer;
     &:after, &:before {
       left:0;
       color:black;

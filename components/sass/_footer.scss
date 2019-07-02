@@ -1,0 +1,23 @@
+footer {
+  width: 100vw;
+  height: 100px;
+
+  display: flex;
+  -ms-display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+
+  justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+
+  align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+
+  font-family: BenchNine;
+  font-size: 1.3rem;
+  font-style: italic;
+}

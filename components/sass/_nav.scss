@@ -2,12 +2,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  @include break(1000px){
-    width: 100vw;
-    background:white;
-  }
+  z-index: 2;
   ul{
-    @include break(1000px){
+    @include break(1000px, 401px){
       display:flex;
       -ms-display:flex;
       -webkit-display:flex;
@@ -18,20 +15,30 @@
       -webkit-justify-content: space-around;
       -moz-justify-content: space-around;
 
-      top:0;
-      left:0;
+      width: 100vw;
+      background:white;
+
+      @include break($mobile){
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content:center;
+
+      }
     }
   }
   li {
     font-family: BenchNine;
     font-size: 1.4rem;
     color:white;
-    margin: 20px;
+    margin: 50px;
     padding: 10px;
     background: $main-purple;
     width: 50px;
     height: 50px;
     border-radius: 100%;
+
+    transition: background 0.3s ease-out;
 
     display: flex;
     -ms-display: flex;
@@ -48,24 +55,56 @@
     -webkit-align-items: center;
     -moz-align-items: center;
 
+    &:hover{
+      cursor: pointer;
+
+      @include break(2000px, 1001px){
+        border:0.5px solid $main-green;
+        color: $main-green !important;
+      }
+    }
+    //correct spacing between nav items in mid-range screens
+    @include break(750px, 401px){
+      margin:20px;
+      padding: 1%;
+    }
+
     @include break($mobile){
+      &[class="back-btn"]{
+        display:none;
+      }
       font-size:1.1rem;
       color:black;
       margin:0.5%;
       padding:0.5%;
       height: 3%;
-      background: transparent;
-    }
-    &:hover{
-      cursor: pointer;
-      border:0.5px solid $main-green;
-      color: $main-green;
+
+      font-size: 1.2rem;
+      color:white;
+      margin: 20px;
+      padding: 10px;
+      background: $main-purple;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+
     }
     @include break(1000px, 401px){
+      margin-bottom: 3px;
       font-size: 1.6rem;
-      margin-top:5px;
+      margin-top:3px;
       background:transparent;
       color: black;
     }
   }
+}
+
+.backArrow {
+  display: none;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
 }

@@ -1,0 +1,43 @@
+.player {
+  width:660px;
+  height:auto;
+  color:white;
+  margin-left: $main-margins;
+  border-radius: 0 10px 10px 0;
+  background: lighten($main-purple, 10%);
+  margin: 0 auto;
+  @include break(700px) {
+    width:90%;
+  }
+
+  li {
+    position: relative;
+    padding: 5%;
+    height:auto;
+    text-align: center;
+    font-size:2rem;
+    transform-origin: left;
+    transition: background 0.3s ease-out, transform 0.3s ease-out;
+    &:hover{
+      transform-origin: left;
+      background: darken($main-purple, 10%);
+    }
+  }
+}
+
+//Styles  for when song is playing or paused
+
+.playing {
+  color:$main-green;
+  font-style: italic;
+  text-align: right !important;
+  background: $main-purple;
+  transition: background 0.3s ease-out;
+}
+
+.paused {
+  color:$faded-green;
+  text-align: right !important;
+  background: $main-purple;
+  transition: background 0.3s ease-out, transform 0.3s ease-out;
+}

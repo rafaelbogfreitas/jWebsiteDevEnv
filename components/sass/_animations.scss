@@ -1,13 +1,5 @@
-@keyframes slideLeft {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translateX(-100px);
-    opacity:0;
-  }
-}
 
+//animation for the 'send' button during hover state in the form
 @keyframes buttonActive {
   0% {
     transform: scale(1);
