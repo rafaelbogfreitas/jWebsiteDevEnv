@@ -66,10 +66,11 @@ player.addEventListener('click', function(e){
     let audio = document.createElement('audio');
     audio.id = 'playing';
     audio.src = songName;
+
     document.body.appendChild(audio);
 
-
     audio.play();
+
 
     audio.addEventListener('ended', function(e){
       audio.parentNode.removeChild(audio);
@@ -81,23 +82,21 @@ player.addEventListener('click', function(e){
 $(document).ready(function(){
 
   $('.player').on('click', function(event){
-    if($(event.target).hasClass('playing'))
 
-      $(event.target).removeClass('playing').addClass('paused');
-      
-    else
+    if($(event.target).hasClass('playing')) $(event.target).removeClass('playing').addClass('paused');
 
-      $(event.target).removeClass('paused').addClass('playing')
-      .siblings().removeClass('playing paused');
+    else $(event.target).removeClass('paused').addClass('playing').siblings().removeClass('playing paused');
 
   });//player event listener
 
   //songs area event listener to remove player classes and pause the song.
   $('.songs').on('click', function(e){
-    if($(e.target).hasClass('songs')){
-      let audio = document.querySelector('audio');
-      audio.parentNode.removeChild(audio);
+
+    if($('audio') && $(e.target).hasClass('songs')){
+
+      $('audio').remove();
       $('.player').children().removeClass('playing paused');
+
     }
 
   });//songs event listener
@@ -105,7 +104,7 @@ $(document).ready(function(){
 });
 
 
-//This is script controls the navigation of th Website
+//This is script controls the navigation of the Website
 //====================================================
 
 

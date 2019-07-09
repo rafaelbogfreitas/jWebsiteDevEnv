@@ -1,5 +1,5 @@
 
-//This is script controls the navigation of th Website
+//This is script controls the navigation of the Website
 //====================================================
 
 
