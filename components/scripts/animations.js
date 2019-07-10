@@ -10,8 +10,8 @@ meet.addEventListener('click', function(){
 
     ball.animate(
       [
-        {'transform':'translateX(300px) skewX(-45deg)', 'opacity': 0},
-        {'transform':'translateX(0px) skewX(0deg)', 'opacity': 1}
+        {'transform':'scaleY(0)', 'opacity': 0},
+        {'transform':'scaleY(1)', 'opacity': 1}
       ],
       {
         delay:100,

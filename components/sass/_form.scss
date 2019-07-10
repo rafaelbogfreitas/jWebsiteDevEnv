@@ -22,6 +22,9 @@
   margin:$main-margins;
   height: auto;
   width: 60%;
+  @include break(1000px, 401px){
+    width:90%;
+  }
   @include break(400px){
     width:95%;
   }
