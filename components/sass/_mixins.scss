@@ -3,3 +3,10 @@
     @content
   }
 };
+
+@mixin flex-box($property, $value) {
+  #{$property}:$value;
+  -moz-#{$property}:$value;
+  -webkit-#{$property}:$value;
+  -ms-#{$property}:$value;
+}

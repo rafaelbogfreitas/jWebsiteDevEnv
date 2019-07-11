@@ -372,9 +372,10 @@ h2 {
   height: auto;
   color: white;
   margin-left: 3% 5% 5% 3%;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   background: #bf91f9;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media screen and (max-width: 700px) and (min-width: 0px) {
   .player {
@@ -383,16 +384,64 @@ h2 {
 }
 .player li {
   position: relative;
-  padding: 5%;
-  height: auto;
+  padding: 5% 5% 5% 0.5%;
+  height: 25px;
   text-align: center;
   font-size: 2rem;
   transform-origin: left;
   transition: background 0.3s ease-out, transform 0.3s ease-out;
+  display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  justify-content: space-around;
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
 }
 .player li:hover {
   transform-origin: left;
   background: #872ff5;
+}
+.player li img {
+  width: 5%;
+  margin-left: -20px;
+  height: auto;
+  transition: transform 0.3s ease-in;
+  display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+}
+@media screen and (max-width: 500px) and (min-width: 0px) {
+  .player li img {
+    width: 10%;
+    margin-left: -5px;
+  }
+}
+.player li img:hover {
+  transform: scale(1.4);
+  transition: transform 0.3s ease-out;
+}
+.player li img:active {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in;
+}
+.player li div {
+  width: 50%;
+  height: auto;
+  display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
 }
 
 .playing {
@@ -404,10 +453,29 @@ h2 {
 }
 
 .paused {
-  color: rgba(210, 255, 113, 0.2);
+  color: rgba(210, 255, 113, 0.2) !important;
   text-align: right !important;
   background: #a360f7;
   transition: background 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.playing img {
+  transform: scale(1.4);
+  margin-left: 5px;
+}
+
+.paused img {
+  transform: scale(1.4);
+  margin-left: 5px;
+}
+
+span {
+  visibility: hidden;
+}
+
+.paused span {
+  visibility: visible;
+  align-self: flex-end;
 }
 
 .video {
@@ -466,18 +534,13 @@ h2 {
   width: 100%;
   height: 100%;
   display: flex;
-  -ms-display: flex;
-  -webkit-display: flex;
   -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
   justify-content: center;
-  -ms-justify-content: center;
   -moz-justify-content: center;
   -webkit-justify-content: center;
-}
-@media screen and (max-width: 400px) and (min-width: 0px) {
-  .contact-page-content {
-    justify-content: center;
-  }
+  -ms-justify-content: center;
 }
 
 .contact-form {
@@ -485,17 +548,17 @@ h2 {
   height: auto;
   width: 60%;
   display: flex;
-  -ms-display: flex;
   -moz-display: flex;
   -webkit-display: flex;
+  -ms-display: flex;
   flex-direction: column;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
   -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   justify-content: space-around;
-  -ms-justify-content: space-around;
-  -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
   border-radius: 10px;
   background: #a360f7;
   color: white;
@@ -508,19 +571,19 @@ h2 {
 
 .form-section {
   display: flex;
-  -ms-display: flex;
-  -webkit-display: flex;
   -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
   justify-content: space-between;
-  -ms-justify-content: space-between;
-  -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
 }
 .form-section label {
   align-self: flex-start;
-  -ms-align-self: flex-start;
-  -webkit-align-self: flex-start;
   -moz-align-self: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-align-self: flex-start;
   margin: 3%;
   font-size: 1.5rem;
 }
@@ -534,9 +597,9 @@ h2 {
   width: 70%;
   height: 25px;
   align-self: flex-end;
-  -ms-align-self: flex-end;
-  -webkit-align-self: flex-end;
   -moz-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  -ms-align-self: flex-end;
   margin: 3%;
   font-size: 1.2rem;
   color: #a360f7;
@@ -552,9 +615,9 @@ h2 {
   margin: 3% auto;
   font-size: 1.2rem;
   align-self: center;
-  -ms-align-self: center;
-  -webkit-align-self: center;
   -moz-align-self: center;
+  -webkit-align-self: center;
+  -ms-align-self: center;
   width: 30%;
   height: 30px;
 }
@@ -565,9 +628,9 @@ h2 {
   width: 70%;
   height: 100px;
   align-self: flex-end;
-  -ms-align-self: flex-end;
-  -webkit-align-self: flex-end;
   -moz-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  -ms-align-self: flex-end;
   margin: 3%;
   padding: 1%;
   font-size: 1.2rem;
@@ -583,17 +646,17 @@ footer {
   width: 100vw;
   height: 100px;
   display: flex;
-  -ms-display: flex;
-  -webkit-display: flex;
   -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
   justify-content: center;
-  -ms-justify-content: center;
   -moz-justify-content: center;
   -webkit-justify-content: center;
+  -ms-justify-content: center;
   align-items: center;
-  -ms-align-items: center;
-  -webkit-align-items: center;
   -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   font-family: BenchNine;
   font-size: 1.3rem;
   font-style: italic;

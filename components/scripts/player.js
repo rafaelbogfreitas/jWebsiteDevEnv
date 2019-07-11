@@ -1,23 +1,56 @@
+$(document).ready(function(){
+
+  $('.player').on('click', function(event){
+
+
+    if($(event.target).is('img') && $(event.target).parent().hasClass('playing')) $(event.target).parent().removeClass('playing').addClass('paused');
+
+    else if ($(event.target).is('img')) $(event.target).parent().removeClass('paused').addClass('playing').siblings().removeClass('playing paused');
+
+  });//player event listener
+
+  //TO-DO click event that deletes 'audio' if anywhere is clicked but the player
+
+  //TO-DO touch events
+  // $('.player').on('touchstart', function(e){
+  //   if($(e.target).is('li')){
+  //     $(e.target).css({'background':'black'});
+  //   }
+  // }).on('touchend', function(e){
+  //   if($(e.target).is('li')){
+  //     $(e.target).css({'background':'white'});
+  //   }
+  // });
+
+});
+
 const player = document.querySelector('.player');
 
 
 player.addEventListener('click', function(e){
   let songName = e.target.getAttribute('data-src');
   const songPlaying = document.querySelector('audio');
+  let btns = document.querySelectorAll('.player img');
 
+  console.log(e);
+
+  for(let i=0; i<btns.length; i++) btns[i].src = 'images/play.svg';
+
+  e.target.src = 'images/pause.svg';
 
   if(songPlaying) {
     if(songName===songPlaying.getAttribute('src')){
       if(songPlaying.paused){
         songPlaying.play();
         songPlaying.id = 'playing';
+        e.target.src = 'images/pause.svg';
       } else {
         songPlaying.pause();
         songPlaying.id = 'paused';
+        e.target.src = 'images/play.svg';
       }
 
     } else {
-      // e.target.classList.add('playing');
       songPlaying.src = songName;
       songPlaying.play();
     }
@@ -38,27 +71,3 @@ player.addEventListener('click', function(e){
     }, false);
   }
 }, false);
-
-$(document).ready(function(){
-
-  $('.player').on('click', function(event){
-
-    if($(event.target).hasClass('playing')) $(event.target).removeClass('playing').addClass('paused');
-
-    else $(event.target).removeClass('paused').addClass('playing').siblings().removeClass('playing paused');
-
-  });//player event listener
-
-  //songs area event listener to remove player classes and pause the song.
-  $('.songs').on('click', function(e){
-
-    if($('audio') && $(e.target).hasClass('songs')){
-
-      $('audio').remove();
-      $('.player').children().removeClass('playing paused');
-
-    }
-
-  });//songs event listener
-
-});
