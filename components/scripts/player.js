@@ -28,12 +28,12 @@ const player = document.querySelector('.player');
 
 
 player.addEventListener('click', function(e){
+
   let songName = e.target.getAttribute('data-src');
   const songPlaying = document.querySelector('audio');
   let btns = document.querySelectorAll('.player img');
 
-  console.log(e);
-
+  if(songName != null)
   for(let i=0; i<btns.length; i++) btns[i].src = 'images/play.svg';
 
   e.target.src = 'images/pause.svg';
@@ -50,11 +50,11 @@ player.addEventListener('click', function(e){
         e.target.src = 'images/play.svg';
       }
 
-    } else {
+    } else if (songName != null){
       songPlaying.src = songName;
       songPlaying.play();
     }
-  } else {
+  } else if (songName != null){
 
     let audio = document.createElement('audio');
     audio.id = 'playing';
@@ -67,7 +67,33 @@ player.addEventListener('click', function(e){
 
     audio.addEventListener('ended', function(e){
       audio.parentNode.removeChild(audio);
+
+      let lis = document.querySelectorAll('.player li');
+      for(let i = 0; i < lis.length; i++) {
+        lis[i].classList.remove('playing');
+      }
+      for(let i=0; i<btns.length; i++) btns[i].src = 'images/play.svg';
       e.id = '';
-    }, false);
+
+    }, false); //music finished event listener
   }
 }, false);
+
+const playerOptions = {
+  threshold:0.3
+}
+
+const playerObserver = new IntersectionObserver(function(entries, playerObserver){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting){
+      let audio = document.querySelector('audio');
+      let playerPLaying = document.querySelector('.player .playing');
+      let playerPLayingImg = document.querySelector('.player .playing img');
+      document.querySelector('body').removeChild(audio);
+      playerPLaying.classList.remove('playing');
+      playerPLayingImg.src = 'images/play.svg';
+    }
+  })
+}, playerOptions)
+
+playerObserver.observe(player);
