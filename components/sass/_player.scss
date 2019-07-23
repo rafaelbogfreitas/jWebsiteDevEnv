@@ -3,29 +3,65 @@
   height:auto;
   color:white;
   margin-left: $main-margins;
-  border-radius: 0 10px 10px 0;
+  border-radius:10px;
   background: lighten($main-purple, 10%);
   margin: 0 auto;
+  overflow: hidden;
   @include break(700px) {
     width:90%;
   }
 
   li {
     position: relative;
-    padding: 5%;
-    height:auto;
+    padding: 5% 5% 5% 0.5%;
+    height:25px;
     text-align: center;
     font-size:2rem;
     transform-origin: left;
     transition: background 0.3s ease-out, transform 0.3s ease-out;
+    @include flex-box(display, flex);
+    @include flex-box(justify-content, space-around);
     &:hover{
       transform-origin: left;
       background: darken($main-purple, 10%);
+    }
+    img {
+      width:5%;
+      @include break(500px){
+        width:10%;
+        margin-left: -5px;
+      }
+      margin-left: -20px;
+      height: auto;
+      transition: transform 0.3s ease-in;
+
+      @include flex-box(display, flex);
+      @include flex-box(justify-content, flex-start);
+
+      &:hover {
+        transform: scale(1.4);
+        transition: transform 0.3s ease-out;
+      }
+      &:active {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in;
+
+      }
+    }
+    div {
+      width: 50%;
+      height: auto;
+
+      @include flex-box(display, flex);
+      @include flex-box(justify-content, flex-start);
+
     }
   }
 }
 
 //Styles  for when song is playing or paused
+
+
 
 .playing {
   color:$main-green;
@@ -36,8 +72,26 @@
 }
 
 .paused {
-  color:$faded-green;
+  color:$faded-green !important;
   text-align: right !important;
   background: $main-purple;
   transition: background 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.playing img {
+  transform:scale(1.4);
+  margin-left: 5px;
+}
+
+.paused img {
+  transform:scale(1.4);
+  margin-left: 5px;
+}
+
+span {
+  visibility: hidden;
+}
+.paused span {
+  visibility: visible;
+  align-self: flex-end;
 }
