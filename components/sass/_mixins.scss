@@ -5,16 +5,8 @@
 };
 
 @mixin flex-box($property, $value) {
-<<<<<<< HEAD
-  #{$property}: $value;
-  -ms-#{$property}: $value;
-  -moz-#{$property}: $value;
-  -o-#{$property}: $value;
-  -webkit-#{$property}:$value;
-=======
   #{$property}:$value;
   -moz-#{$property}:$value;
   -webkit-#{$property}:$value;
   -ms-#{$property}:$value;
->>>>>>> player
-}
+};

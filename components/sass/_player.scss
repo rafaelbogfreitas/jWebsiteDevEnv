@@ -8,19 +8,20 @@
   margin: 0 auto;
   overflow: hidden;
   @include break(700px) {
-    width:90%;
+    width:95%;
   }
-
+  
   li {
     position: relative;
-    padding: 5% 5% 5% 0.5%;
-    height:25px;
-    text-align: center;
+    width:100%;
+    height:80px;
+    padding:0 15px;
     font-size:2rem;
     transform-origin: left;
     transition: background 0.3s ease-out, transform 0.3s ease-out;
     @include flex-box(display, flex);
-    @include flex-box(justify-content, space-around);
+    @include flex-box(justify-content, space-between);
+    @include flex-box(align-items, center);
     &:hover{
       transform-origin: left;
       background: darken($main-purple, 10%);
@@ -28,15 +29,10 @@
     img {
       width:5%;
       @include break(500px){
-        width:10%;
-        margin-left: -5px;
+        width:30px;
       }
-      margin-left: -20px;
       height: auto;
       transition: transform 0.3s ease-in;
-
-      @include flex-box(display, flex);
-      @include flex-box(justify-content, flex-start);
 
       &:hover {
         transform: scale(1.4);
@@ -49,49 +45,100 @@
       }
     }
     div {
-      width: 50%;
+      width: 40%;
       height: auto;
 
       @include flex-box(display, flex);
       @include flex-box(justify-content, flex-start);
 
     }
+    //Styles  for when song is playing or paused
+    .spinner {
+      opacity:0;
+      width: 20%;
+      @include break(500px){
+        width: 30%;
+      }
+      height: 100%;
+      text-align: center;
+    }
+  
+    .spinner > div {
+      background-color: white;
+      margin:20px 5px 0;
+      height: 40px;
+      width: 5px;
+  
+      -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+      animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    }
+  
+    .spinner .rect2 {
+      -webkit-animation-delay: -1.1s;
+      animation-delay: -1.1s;
+    }
+  
+    .spinner .rect3 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+  
+    .spinner .rect4 {
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s;
+    }
+  
+    .spinner .rect5 {
+      -webkit-animation-delay: -0.8s;
+      animation-delay: -0.8s;
+    }
+  
+    @-webkit-keyframes sk-stretchdelay {
+      0%, 40%, 100% { -webkit-transform: scaleY(0) }
+      20% { -webkit-transform: scaleY(1.0) }
+    }
+  
+    @keyframes sk-stretchdelay {
+      0%, 40%, 100% {
+        transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+      }  20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+      }
+    }//spinner
   }
 }
-
-//Styles  for when song is playing or paused
-
 
 
 .playing {
   color:$main-green;
-  font-style: italic;
-  text-align: right !important;
   background: $main-purple;
-  transition: background 0.3s ease-out;
+  .spinner{
+  opacity:1 !important;
+  }
+  //styles for the playing bar
 }
 
 .paused {
   color:$faded-green !important;
-  text-align: right !important;
   background: $main-purple;
   transition: background 0.3s ease-out, transform 0.3s ease-out;
+  .spinner{
+  opacity:1;
+  }
 }
 
 .playing img {
   transform:scale(1.4);
-  margin-left: 5px;
+  @include break(500px){
+    transform:scale(1);
+  }
 }
 
 .paused img {
   transform:scale(1.4);
-  margin-left: 5px;
-}
-
-span {
-  visibility: hidden;
-}
-.paused span {
-  visibility: visible;
-  align-self: flex-end;
+      @include break(500px){
+        transform:scale(1);
+      }
 }
