@@ -1,14 +1,7 @@
 header {
   @include break($mobile){
-    display:flex;
-    -ms-display:flex;
-    -webkit-display:flex;
-    -moz-display:flex;
-
-    align-items: flex-end;
-    -ms-align-items: flex-end;
-    -webkit-align-items: flex-end;
-    -moz-align-items: flex-end;
+    @include flex-box(display, flex);
+    @include flex-box(align-items, flex-end);
   }
 }
 
