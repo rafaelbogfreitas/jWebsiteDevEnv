@@ -106,6 +106,7 @@ player.addEventListener('click', function(e){
         songPlaying.play();
         songPlaying.id = 'playing';
         e.target.src = 'images/pause.svg';
+
       } else {
         songPlaying.pause();
         songPlaying.id = 'paused';
@@ -121,6 +122,7 @@ player.addEventListener('click', function(e){
     let audio = document.createElement('audio');
     audio.id = 'playing';
     audio.src = songName;
+    audio.preload = 'auto';
 
     document.body.appendChild(audio);
 
