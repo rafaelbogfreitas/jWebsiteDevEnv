@@ -21,6 +21,23 @@
 
   </head>
   <body>
+    <!-- Mustache.js template to display the songs in the player -->
+    <script type="text/template" id="template">
+      {{#songs}}
+      <li>
+        <img data-src={{dataSource}} src={{src}} alt={{alt}}>
+        <div>{{songTitle}}</div>
+        <!-- <span>paused</span> -->
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </li>
+      {{/songs}}
+    </script>
     <header class="banner">
       <div class="logo-box">
         <h1 class="header-logo">J</h1>
@@ -63,56 +80,7 @@
 
     <section class="songs">
       <h2>J SONGS</h2>
-      <ul class="player">
-        <li>
-          <img data-src="songs/getOut.mp3" src="images/play.svg" alt="play button">
-          <div>Get Out</div>
-          <!-- <span>paused</span> -->
-          <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
-        </li>
-        <li>
-          <img data-src="songs/closer.mp3" src="images/play.svg" alt="play button">
-          <div>Closer</div>
-          <!-- <span>paused</span> -->
-          <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
-        </li>
-        <li>
-          <img  data-src="songs/babyBabyBaby.mp3" src="images/play.svg" alt="play button">
-          <div>Baby Baby Baby</div>
-          <!-- <span>paused</span> -->
-          <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
-        </li>
-        <li>
-          <img data-src="songs/dear.mp3" src="images/play.svg" alt="play button">
-          <div>Dear</div>
-          <!-- <span>paused</span> -->
-          <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
-        </li>
-      </ul>
+      <ul id="template-container" class="player"></ul>  
     </section>
 
     <!-- VIDEOS section -->

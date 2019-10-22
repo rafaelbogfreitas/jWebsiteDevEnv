@@ -6,7 +6,6 @@ const miniHtml = require('gulp-minify-html');
 const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify-es').default;
-const babel = require('gulp-babel');
 
 
 let jsSources = ['components/scripts/**/*.js'];
