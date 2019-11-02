@@ -1,13 +1,17 @@
-#Jaime Website Project
+># Jaime Website Project
 
-This is the beginning of the project to create an website for showcasing Jaimes' music and video. I will do it in few stages:
+---
 
-##Learn workflow and have a template for future projects
+### This is the beginning of the project to create an website for showcasing Jaime's music and video. I will do it in few stages:  
 
-##Learn templating to use in my next projects
+* Learn workflow and have a template for future projects
 
-##Design the website and put it together
+* Learn templating to use in my next projects
 
-##Create functionality
+* Design the website and put it together
 
-##Create a contact form with an email script
+* Create functionality
+
+* Create a contact form with an email script
+
+---
