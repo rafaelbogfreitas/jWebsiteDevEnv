@@ -8,6 +8,8 @@ J World Music
 
 [Build](#Build)
 
+[Contact](#Contact)
+
 ## About
 > This project was built to meet the client's request for a website to display some of his musical work. The idea was to create a player to listen to some of his songs, have a link to play his video, as well as find some info about him and contact form him that linke to his email.
 The website is hosted on [Netlify](https://www.netlify.com/).
@@ -49,15 +51,11 @@ to minify all files and pipe them to **./builds/dist**.
 
 ## Build
 
-The root of the project's folder consist in two main folders: **components** and **builds**.
-
+>The root of the project's folder consist in two main folders: **components** and **builds**.
 The **components** folder contains two files:
-    
-- scripts
-- sass
-
-Inside **sass** are located all sass partials, organized by components. All of them are exported to a main **style.scss**, which imports all partials and is then compile to *CSS* and piped to *./builds/development/css*.
-
+-scripts
+-sass
+>Inside **sass** are located all sass partials, organized by components. All of them are exported to a main **style.scss**, which imports all partials and is then compile to *CSS* and piped to *./builds/development/css*.
 In **scripts** can be found all **\*.js** files which are concatenated using *gulp-concat* into a single **script.js** and piped to *~/builds/development/js*.
 
 **MarkUp**
@@ -124,3 +122,9 @@ let content = $('#template').html();
 *JQuery* finds the *script* tag in **index.html**, uses the *data* object to render the markup and then target a container, *#template-container* element with the resulting code.
 
 **Scripts**
+
+## Contact
+
+[Email](rafaelbogfreitas@gmail.com)
+[Linkedin](https://github.com/rafaelbogfreitas)
+Project built by [Rafael Freitas](https://www.rafaelfreitas.co.uk) | 2019
