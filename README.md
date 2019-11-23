@@ -1,12 +1,12 @@
 J World Music
 =============
-[About](#About)
+####[About](#About)
 
-[Technologies](#Technologies)
+####[Technologies](#Technologies)
 
-[Usage](#Usage)
+####[Usage](#Usage)
 
-[Build](#Build)
+####[Build](#Build)
 
 ## About
 > This project was built to meet the client's request for a website to display some of his musical work. The idea was to create a player to listen to some of his songs, have a link to play his video, as well as find some info about him and contact form him that linke to his email.
@@ -99,3 +99,28 @@ The markup for the song player is build dinamically using this **Mustache** temp
 
 </script>
 ```
+
+which is rendered using a *JavaScript* object and *JQuery* located in *./builds/development/js* folder. It contains the relevant data for every song in the player. 
+
+```javascript
+let data = {
+        "songs":[
+            {
+                "songTitle":"Get Out",
+                "dataSource":"songs/getOut.mp3",
+                "src":"images/play.svg",
+                "alt":"play button"
+            }
+        ]
+};
+
+let content = $('#template').html();
+
+    let result = Mustache.render(content, data);
+
+    $('#template-container').html(result);
+```
+
+*JQuery* finds the *script* tag in **index.html**, uses the *data* object to render the markup and then target a container, *#template-container* element with the resulting code.
+
+**Scripts**
