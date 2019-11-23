@@ -1,12 +1,12 @@
 J World Music
 =============
-#### [About](#About)
+[### About](#About)
 
-#### [Technologies](#Technologies)
+[### Technologies](#Technologies)
 
-#### [Usage](#Usage)
+[### Usage](#Usage)
 
-#### [Build](#Build)
+[### Build](#Build)
 
 ## About
 > This project was built to meet the client's request for a website to display some of his musical work. The idea was to create a player to listen to some of his songs, have a link to play his video, as well as find some info about him and contact form him that linke to his email.
