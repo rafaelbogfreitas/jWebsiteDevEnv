@@ -53,8 +53,10 @@ to minify all files and pipe them to **./builds/dist**.
 
 >The root of the project's folder consist in two main folders: **components** and **builds**.
 The **components** folder contains two files:
--scripts
--sass
+>
+>- scripts
+>- sass
+>
 >Inside **sass** are located all sass partials, organized by components. All of them are exported to a main **style.scss**, which imports all partials and is then compile to *CSS* and piped to *./builds/development/css*.
 In **scripts** can be found all **\*.js** files which are concatenated using *gulp-concat* into a single **script.js** and piped to *~/builds/development/js*.
 
@@ -123,8 +125,22 @@ let content = $('#template').html();
 
 **Scripts**
 
+All the scripts are located in *./components/scripts*. They are separed in the following modules to make the code more maintainable and easy to understand:
+
+- animations.js
+- jquery
+- mustache
+- observer
+- player 
+- script.js
+- template-script
+
+
+
 ## Contact
 
-[Email](rafaelbogfreitas@gmail.com)
+[Email](mailto:rafaelbogfreitas@gmail.com)
+
 [Linkedin](https://github.com/rafaelbogfreitas)
+
 Project built by [Rafael Freitas](https://www.rafaelfreitas.co.uk) | 2019
