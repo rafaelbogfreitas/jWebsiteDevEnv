@@ -745,5 +745,5 @@ footer {
   }
 }
 .appear {
-  animation: appear 1s ease-in 0.5s;
+  animation: appear 1s ease-in 0s;
 }

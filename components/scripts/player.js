@@ -79,21 +79,25 @@ player.addEventListener('click', function(e){
   }
 }, false);
 
-const playerOptions = {
-  threshold:0.3
-}
 
-const playerObserver = new IntersectionObserver(function(entries, playerObserver){
-  entries.forEach(entry => {
-    if(!entry.isIntersecting){
-      let audio = document.querySelector('audio');
-      let playerPLaying = document.querySelector('.player .playing');
-      let playerPLayingImg = document.querySelector('.player .playing img');
-      document.querySelector('body').removeChild(audio);
-      playerPLaying.classList.remove('playing');
-      playerPLayingImg.src = 'images/play.svg';
-    }
-  })
-}, playerOptions)
+// const player = document.querySelector('.player');
 
-playerObserver.observe(player);
+// const playerOptions = {
+//   threshold:0.3
+// }
+
+// const playerObserver = new IntersectionObserver(function(entries, playerObserver){
+//   entries.forEach(entry => {
+//     if(!entry.isIntersecting){
+//       let audio = document.querySelector('audio');
+//       let playerPLaying = document.querySelector('.player .playing');
+//       let playerPLayingImg = document.querySelector('.player .playing img');
+//       document.querySelector('body').removeChild(audio);
+//       playerPLaying.classList.remove('playing');
+//       playerPLayingImg.src = 'images/play.svg';
+//     }
+//   })
+// }, playerOptions)
+
+// playerObserver.observe(player);
+

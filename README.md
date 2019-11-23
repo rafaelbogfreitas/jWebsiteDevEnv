@@ -1,13 +1,9 @@
 J World Music
 =============
-[About](#About)
-
-[Technologies](#Technologies)
-
-[Usage](#Usage)
-
-[Build](#Build)
-
+[About](#About)  
+[Technologies](#Technologies)  
+[Usage](#Usage)  
+[Build](#Build)  
 [Contact](#Contact)
 
 ## About
@@ -127,15 +123,34 @@ let content = $('#template').html();
 
 All the scripts are located in *./components/scripts*. They are separed in the following modules to make the code more maintainable and easy to understand:
 
-- animations.js
-- jquery
-- mustache
-- observer
-- player 
+- jquery-3.4.2.min.js
+- mustache.js
+- observer.js
+- player.js 
 - script.js
-- template-script
+- template-script.js
 
+In **script.js** is found the logics  responsible for general features on the page, not related to any specif section. 
+The libraries used in the project are also kept in script files, **jquery.js** and **mustache.js**, in the same folder.
 
+The file **observer.js** contains the Intersection Observer responsible for triggering the animation on the *Meet* section by adding/removing a class.
+
+In **player.js** are contained all the logics for the player. It was built using vanilla *JavaScript*.
+
+Last, the file **template-script.js**  is responsible for building the player's markup with *Mustache*.
+
+**Styles**
+
+All the styles were written with *SASS* and are found in *./components/sass*. They are all organized in partials to target different sections of the website, making it easier to maintain.
+The file **styles.scss** imports all partials and is compiled into *CSS* using *Compass*.
+
+**Dist**
+
+In *./builds/dist* are found all the files minified and ready to be deployed to the web.
+
+**Future**
+
+The client gave me full liberty regarding the design and functionality of the page, so small updates and changes are done often to improve the design.
 
 ## Contact
 
