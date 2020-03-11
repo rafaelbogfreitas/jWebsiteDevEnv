@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8374969f-f72e-49d1-99ad-bcd70c4502c7/deploy-status)](https://app.netlify.com/sites/jworldmusic/deploys)
+
 J World Music
 =============
 [About](#About)  
