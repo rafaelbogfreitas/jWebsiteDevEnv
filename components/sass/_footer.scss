@@ -9,6 +9,14 @@ footer {
   @include flex-box(align-items, center);
 
   font-family: BenchNine;
-  font-size: 1.3rem;
+  font-size: 2rem;
+  
+  @include break(500px){
+    font-size: 1.3rem;
+  }
   font-style: italic;
+}
+
+a {
+  text-decoration: none;
 }
